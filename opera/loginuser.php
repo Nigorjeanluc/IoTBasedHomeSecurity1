@@ -8,8 +8,8 @@ include("../connect.php");
 		$res= mysqli_query($dbcon,$sql) or die ("Failed".mysqli_error());
 		$row= mysqli_fetch_array($res);
 		if(isset($row)){
-			$_SESSION['user']=$username;
-			$_SESSION['ID_user']=$row['ID'];
+			$_SESSION['user']=$row['name'];
+			$_SESSION['ID_user']=$row['id'];
 			echo "<meta http-equiv='refresh' content='0;url=../admin/index.php'>";
 		}else{
 			echo "<meta http-equiv='refresh' content='0;url=../admin/login.php?yes=0'>";
