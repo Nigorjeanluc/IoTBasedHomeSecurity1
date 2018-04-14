@@ -1,8 +1,13 @@
 <?php
+    session_start();
+    $_SESSION['user'];
+    if(!isset($_SESSION['user'])){
+        echo "<meta http-equiv='refresh' content='0;url=../../login.php?no=0'>";
+    }
     include('../../../connect.php');
-    $query = "SELECT * FROM sensors ORDER BY id LIMIT 7";
+    /*$query = "SELECT Celcius,Fahrenheit FROM sensors ORDER BY id LIMIT 7";
     $res = mysqli_query($dbcon, $query);
-    /*while($row = mysqli_fetch_array($res)){
+    while($row = mysqli_fetch_array($res)){
         $data .="{ DegreeCelcius:'".$row["Celcius"]."', DegreeFahrenheit:".$row["Fahrenheit"]."}, ";
     }*/
 ?>
@@ -12,7 +17,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Flot Charts</title>
+    <title>IoT Home Monitoring | Charts</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -39,8 +44,8 @@
     <div class="wrapper">
 
         <?php
-            include('../../header.php');
-            include('../../aside.php');
+            include('header.php');
+            include('aside.php');
         ?>
 
         <!-- Content Wrapper. Contains page content -->
@@ -390,6 +395,25 @@
     <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- Bootstrap 3.3.6 -->
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Ajax -->
+    <script>
+        $(document).on("ready", function(){
+            loadData();
+        });
+
+        var loadData = function(){
+            $.ajax({
+                type:"POST",
+                url:"temperature.php",
+                cache: false
+            }).done(function(data){
+                console.log(data);
+                var infos = JSON.parse(data);
+            });
+        }
+    </script>
+
     <!-- FastClick -->
     <script src="../../plugins/fastclick/fastclick.js"></script>
     <!-- AdminLTE App -->
@@ -414,7 +438,7 @@
             // We use an inline data source in the example, usually data would
             // be fetched from a server
             var data = [],
-                totalPoints = 100;
+                totalPoints = 10;
 
             function getRandomData() {
 

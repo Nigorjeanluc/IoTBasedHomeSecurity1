@@ -18,7 +18,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home Monitoring | Flame Detection</title>
+    <title>IoT Home Monitoring | Flame Detection</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -45,8 +45,8 @@
     <div class="wrapper">
 
         <?php
-            include('../../header.php');
-            include('../../aside.php');
+            include('header.php');
+            include('aside.php');
         ?>
 
         <!-- Content Wrapper. Contains page content -->
@@ -89,7 +89,7 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body text-center">
-                                <div class="sparkline" data-type="bar" data-width="97%" data-height="100px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
+                                <div class="sparkline" data-type="bar" data-width="97%" data-height="250px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
                                     60,4,8, 9, 10, 5, 13, 18, 21, 7, 9
                                 </div>
                             </div>
@@ -110,8 +110,8 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body text-center">
-                                <div class="sparkline" data-type="bar" data-width="97%" data-height="100px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
-                                    60,4,8, 9, 10, 5, 13, 18, 21, 7, 9
+                                <div class="sparkline" data-type="bar" data-width="97%" data-height="250px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
+                                    260, 700, 210, 485, 170, 550, 713, 318, 621, 507, 1009
                                 </div>
                             </div>
                             <!-- /.box-body -->
@@ -131,8 +131,8 @@
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body text-center">
-                                <div class="sparkline" data-type="bar" data-width="97%" data-height="100px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
-                                    60,4,8, 9, 10, 5, 13, 18, 21, 7, 9
+                                <div class="sparkline" data-type="bar" data-width="97%" data-height="250px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
+                                    1000,500,600, 300, 700, 550, 130, 485, 210, 700, 240
                                 </div>
                             </div>
                             <!-- /.box-body -->

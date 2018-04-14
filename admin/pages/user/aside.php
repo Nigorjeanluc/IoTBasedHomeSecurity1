@@ -29,7 +29,7 @@ echo'
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
-              <a href="pages/user/flame.php">
+              <a href="flame.php">
                 <i class="fa fa-area-chart"></i> <span>Flame detection</span>
                 <!--<span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
@@ -41,7 +41,7 @@ echo'
               </ul>-->
             </li>
             <li class="treeview">
-              <a href="pages/user/temp.php">
+              <a href="temp.php">
                 <i class="fa fa-bar-chart"></i>
                 <span>Temperature variation</span>
                 <!--<span class="pull-right-container">

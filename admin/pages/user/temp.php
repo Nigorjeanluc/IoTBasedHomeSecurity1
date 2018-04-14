@@ -17,7 +17,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home Monitoring | Temperature variation</title>
+    <title>IoT Home Monitoring | Temperature variation</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -44,8 +44,8 @@
     <div class="wrapper">
 
         <?php
-            include('../../header.php');
-            include('../../aside.php');
+            include('header.php');
+            include('aside.php');
         ?>
 
         <!-- Content Wrapper. Contains page content -->
@@ -72,6 +72,7 @@
                                 <h3 class="box-title">Temperature variation each 15 seconds</h3>
 
                                 <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                                 </div>
@@ -421,6 +422,7 @@
             var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
             // This will get the first returned node in the jQuery collection.
             var areaChart = new Chart(areaChartCanvas);
+            
 
             var areaChartData = {
                 <?php
