@@ -72,7 +72,7 @@
                                 <h3 class="box-title">Temperature variation each 15 seconds</h3>
 
                                 <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <button type="button" onclick="adddata()" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                                 </div>
@@ -95,8 +95,10 @@
                                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                                 </div>
                             </div>
-                            <div id="content" class="box-body">
+                            <div class="box-body" id="data">
                             </div>
+
+                            <button id="btn">Show more comments</button>
                             <!-- /.box-body -->
                         </div>
 
@@ -382,7 +384,24 @@
     <script>
         $(document).on("ready", function(){
             loadData();
+            firstData();
+            var dataCount = 5;
+            $("#btn").click(function() {
+                if (dataCount < 12){
+                    dataCount = dataCount + 1;
+                }
+                $("#data").load("load-data.php", {
+                    dataNewCount: dataCount
+                });
+            });
         });
+        
+        var firstData = function(){
+            var dataCount = 5;
+            $("#data").load("load-data.php", {
+                dataNewCount: dataCount
+            });
+        }
 
         var loadData = function(){
             $.ajax({
