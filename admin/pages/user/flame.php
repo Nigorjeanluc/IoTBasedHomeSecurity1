@@ -68,9 +68,9 @@
 
                 <!-- callout -->
                 <div class="callout callout-danger">
-                    <h4>The following was created using data tags</h4>
+                    <h4>Fire flame was detected on the right corner</h4>
 
-                    <p>The following three inline (sparkline) chart have been initialized to read and interpret data tags</p>
+                    <p>At a rate of 89%</p>
                 </div>
                 <!-- /.callout -->
 
