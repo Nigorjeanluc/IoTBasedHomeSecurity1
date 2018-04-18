@@ -460,26 +460,26 @@
                     }
                 ?>
                 <?php echo 'labels: [
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[0])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[1])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[2])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[3])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[4])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[5])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[6])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[7])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[8])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[9])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[10])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[11])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[12])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[13])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[14])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[15])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[16])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[17])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[18])).'",
-                    "'.date('g:i:sA - F dS, Y', strtotime($time[19])).'"],';?>
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[0])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[1])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[2])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[3])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[4])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[5])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[6])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[7])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[8])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[9])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[10])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[11])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[12])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[13])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[14])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[15])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[16])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[17])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[18])).'",
+                    "'.date('h:i:sA - F dS, Y', strtotime($time[19])).'"],';?>
                 datasets: [{
                     <?php
                         echo '

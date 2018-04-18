@@ -21,9 +21,9 @@
         VALUES('".$_GET["lightSensor"]."','".$_GET["flameSensor1"]."','".$_GET["flameSensor2"]."','".$_GET["flameSensor3"]."','".$_GET["flameSensor4"]."','".$_GET["celcius"]."','".$_GET["fahrenheit"]."',now(),now())";
         $res= mysqli_query($dbcon,$sql) or die ("Failed to insert".mysqli_error());
         if(isset($res)){
-        echo "<meta http-equiv='refresh' content='0;url=response.php?yes=1'>";
+            header("Location: response.php?yes=1");
         }else{
-        echo "<meta http-equiv='refresh' content='0;url=response.php?yes=0'>";
+            header("Location: response.php?yes=0");
         }
     }
 ?>

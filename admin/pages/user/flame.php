@@ -90,7 +90,20 @@
                             <!-- /.box-header -->
                             <div class="box-body text-center">
                                 <div class="sparkline" data-type="bar" data-width="97%" data-height="250px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
-                                    60,4,8, 9, 10, 5, 13, 18, 21, 7, 9
+                                    <?php
+                                        $query = "SELECT * FROM sensors ORDER BY id DESC LIMIT 11";
+                                        $res = mysqli_query($dbcon, $query);
+                                        $i = 0;
+                                        $flameSensor1 = array();
+                                        $time = array();
+                                        while($row = mysqli_fetch_array($res)){
+                                            $flameSensor1[$i] = $row['FlameSensor1'];
+                                            $time[$i] = $row['created_at'];
+                                            $i++;
+                                        }
+
+                                        echo $flameSensor1[0].', '.$flameSensor1[1].', '.$flameSensor1[2].', '.$flameSensor1[3].', '.$flameSensor1[4].', '.$flameSensor1[5].', '.$flameSensor1[6].', '.$flameSensor1[7].', '.$flameSensor1[8].', '.$flameSensor1[9].', '.$flameSensor1[10];
+                                    ?>
                                 </div>
                             </div>
                             <!-- /.box-body -->
@@ -111,7 +124,20 @@
                             <!-- /.box-header -->
                             <div class="box-body text-center">
                                 <div class="sparkline" data-type="bar" data-width="97%" data-height="250px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
-                                    260, 700, 210, 485, 170, 550, 713, 318, 621, 507, 1009
+                                <?php
+                                        $query = "SELECT * FROM sensors ORDER BY id DESC LIMIT 11";
+                                        $res = mysqli_query($dbcon, $query);
+                                        $i = 0;
+                                        $flameSensor2 = array();
+                                        $time = array();
+                                        while($row = mysqli_fetch_array($res)){
+                                            $flameSensor2[$i] = $row['FlameSensor2'];
+                                            $time[$i] = $row['created_at'];
+                                            $i++;
+                                        }
+
+                                        echo $flameSensor2[0].', '.$flameSensor2[1].', '.$flameSensor2[2].', '.$flameSensor2[3].', '.$flameSensor2[4].', '.$flameSensor2[5].', '.$flameSensor2[6].', '.$flameSensor2[7].', '.$flameSensor2[8].', '.$flameSensor2[9].', '.$flameSensor2[10];
+                                ?>
                                 </div>
                             </div>
                             <!-- /.box-body -->
@@ -132,7 +158,20 @@
                             <!-- /.box-header -->
                             <div class="box-body text-center">
                                 <div class="sparkline" data-type="bar" data-width="97%" data-height="250px" data-bar-Width="14" data-bar-Spacing="7" data-bar-Color="#016201">
-                                    1000,500,600, 300, 700, 550, 130, 485, 210, 700, 240
+                                <?php
+                                        $query = "SELECT * FROM sensors ORDER BY id DESC LIMIT 11";
+                                        $res = mysqli_query($dbcon, $query);
+                                        $i = 0;
+                                        $flameSensor3 = array();
+                                        $time = array();
+                                        while($row = mysqli_fetch_array($res)){
+                                            $flameSensor3[$i] = $row['FlameSensor3'];
+                                            $time[$i] = $row['created_at'];
+                                            $i++;
+                                        }
+
+                                        echo $flameSensor3[0].', '.$flameSensor3[1].', '.$flameSensor3[2].', '.$flameSensor3[3].', '.$flameSensor3[4].', '.$flameSensor3[5].', '.$flameSensor3[6].', '.$flameSensor3[7].', '.$flameSensor3[8].', '.$flameSensor3[9].', '.$flameSensor3[10];
+                                ?>
                                 </div>
                             </div>
                             <!-- /.box-body -->
