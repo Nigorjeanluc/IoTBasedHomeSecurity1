@@ -28,7 +28,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div style="font-size:1.7em" class="login-logo">
-    <a href="#"><b>User</b> | 24/7 Home Control</a>
+    <a href="#"><b>User</b> | 24/7 Home Monitoring</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
