@@ -4,6 +4,7 @@
     if(!isset($_SESSION['user'])){
         echo "<meta http-equiv='refresh' content='0;url=login.php?no=0'>";
     }
+    include('../connect.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,14 +75,24 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>150</h3>
+              <?php 
+              $query = "SELECT * FROM sensors ORDER BY id DESC LIMIT 1";
+              $res = mysqli_query($dbcon, $query);
+              $i = 0;
+              $flame = array();
+              while($row = mysqli_fetch_array($res)){
+                  $flame[$i] = $row['FlameSensor1'];
+                  $i++;
+              }
+              ?>
+              <h3 style="font-family:broadway;text-shadow:4px 4px 8px black;"><?php echo $flame[0]; ?></h3>
 
               <h1 style="font-family:broadway;font-size:2.2em;text-shadow:4px 4px 8px black;">Flame Detection</h1>
             </div>
             <div class="icon">
-              <i class="ion ion-bag"></i>
+              <i class="ion ion-flame"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="pages/user/flame.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -89,14 +100,24 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+            <?php 
+            $query = "SELECT * FROM sensors ORDER BY id DESC LIMIT 1";
+            $res = mysqli_query($dbcon, $query);
+            $i = 0;
+            $celcius = array();
+            while($row = mysqli_fetch_array($res)){
+                $celcius[$i] = $row['Celcius'];
+                $i++;
+            }
+            ?>
+              <h3 style="font-family:broadway;text-shadow:4px 4px 8px black;"><?php echo $celcius[0]; ?><sup style="font-size: 20px">o</sup> C</h3>
 
               <h1 style="font-family:broadway;font-size:2.0em;text-shadow:4px 4px 8px black;">Temperature Variation</h1>
             </div>
             <div class="icon">
-              <i class="ion ion-stats-bars"></i>
+              <i class="ion ion-thermometer"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="pages/user/temp.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -104,12 +125,12 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>44</h3>
+              <h3 style="font-family:broadway;text-shadow:4px 4px 8px black;">44</h3>
 
               <h1 style="font-family:broadway;font-size:2.2em;text-shadow:4px 4px 8px black;">Human Detection</h1>
             </div>
             <div class="icon">
-              <i class="ion ion-person-add"></i>
+              <i class="ion ion-person-stalker"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
