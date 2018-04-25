@@ -483,16 +483,6 @@
                 datasets: [{
                     <?php
                         echo '
-                            label: "Celcius Degree",
-                            fillColor: "rgba(60,141,188,0.9)",
-                            strokeColor: "rgba(60,141,188,0.8)",
-                            pointColor: "#3b8bba",
-                            pointStrokeColor: "rgba(60,141,188,1)",
-                            pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(60,141,188,1)",
-                            data:['.$celcius[0].', '.$celcius[1].', '.$celcius[2].','.$celcius[3].', '.$celcius[4].', '.$celcius[5].', '.$celcius[6].', '.$celcius[7].', '.$celcius[8].', '.$celcius[9].','.$celcius[10].', '.$celcius[11].', '.$celcius[12].','.$celcius[13].', '.$celcius[14].', '.$celcius[15].', '.$celcius[16].', '.$celcius[17].', '.$celcius[18].', '.$celcius[19].']
-
-                            }, {
                                 label: "Fahrenheit Degree",
                                 fillColor: "rgba(210, 214, 222, 1)",
                                 strokeColor: "rgba(210, 214, 222, 1)",
@@ -501,6 +491,18 @@
                                 pointHighlightFill: "#fff",
                                 pointHighlightStroke: "rgba(220,220,220,1)",
                                 data:['.$fahrenheit[0].', '.$fahrenheit[1].', '.$fahrenheit[2].','.$fahrenheit[3].', '.$fahrenheit[4].', '.$fahrenheit[5].', '.$fahrenheit[6].', '.$fahrenheit[7].', '.$fahrenheit[8].', '.$fahrenheit[9].','.$fahrenheit[10].', '.$fahrenheit[11].', '.$fahrenheit[12].','.$fahrenheit[13].', '.$fahrenheit[14].', '.$fahrenheit[15].', '.$fahrenheit[16].', '.$fahrenheit[17].', '.$fahrenheit[18].', '.$fahrenheit[19].']
+
+                            }, {
+                                
+
+                                label: "Celcius Degree",
+                                fillColor: "rgba(60,141,188,0.9)",
+                                strokeColor: "rgba(60,141,188,0.8)",
+                                pointColor: "#3b8bba",
+                                pointStrokeColor: "rgba(60,141,188,1)",
+                                pointHighlightFill: "#fff",
+                                pointHighlightStroke: "rgba(60,141,188,1)",
+                                data:['.$celcius[0].', '.$celcius[1].', '.$celcius[2].','.$celcius[3].', '.$celcius[4].', '.$celcius[5].', '.$celcius[6].', '.$celcius[7].', '.$celcius[8].', '.$celcius[9].','.$celcius[10].', '.$celcius[11].', '.$celcius[12].','.$celcius[13].', '.$celcius[14].', '.$celcius[15].', '.$celcius[16].', '.$celcius[17].', '.$celcius[18].', '.$celcius[19].']
                         ';
                     ?>
                 }]
