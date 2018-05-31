@@ -72,7 +72,9 @@
                                 <h3 class="box-title">Temperature variation each 15 seconds</h3>
 
                                 <div class="box-tools pull-right">
-                                    <button type="button" onclick="adddata()" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                <!--<button type="button"><i class="fa fa-refresh"></i></button>-->
+                                <input type="button" class="btn btn-default btn-sm" value="Refresh Page" onClick="window.location.href=window.location.href">
+                                    <!--<button type="button" onclick="adddata()" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>-->
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                                 </div>

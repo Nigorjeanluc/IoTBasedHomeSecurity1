@@ -84,7 +84,8 @@
                                 <h3 class="box-title text-warning">In 90 <sup>o</sup> on the right</h3>
 
                                 <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <!--<button type="button"><i class="fa fa-refresh"></i></button>-->
+                                    <input type="button" class="btn btn-default btn-sm" value="Refresh Page" onClick="window.location.href=window.location.href">
                                 </div>
                             </div>
                             <!-- /.box-header -->
@@ -118,7 +119,8 @@
                                 <h3 class="box-title text-warning">In 90 <sup>o</sup> in front</h3>
 
                                 <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <!--<button type="button"><i class="fa fa-refresh"></i></button>-->
+                                    <input type="button" class="btn btn-default btn-sm" value="Refresh Page" onClick="window.location.href=window.location.href">
                                 </div>
                             </div>
                             <!-- /.box-header -->
@@ -152,7 +154,8 @@
                                 <h3 class="box-title text-warning">In 90 <sup>o</sup> on the left</h3>
 
                                 <div class="box-tools pull-right">
-                                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                                   <!--<button type="button"><i class="fa fa-refresh"></i></button>-->
+                                    <input type="button" class="btn btn-default btn-sm" value="Refresh Page" onClick="window.location.href=window.location.href">
                                 </div>
                             </div>
                             <!-- /.box-header -->
