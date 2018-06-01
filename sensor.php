@@ -17,8 +17,8 @@
         $flameSensor4 = $_GET['flameSensor4'];
         $celcius = $_GET['celcius'];
         $fahrenheit = $_GET['fahrenheit'];
-        $sql= "INSERT INTO IoTBasedHomeSecurity.sensors(LightSensor,FlameSensor1,FlameSensor2,FlameSensor3,FlameSensor4,Celcius,Fahrenheit,HumanDetect,created_at,updated_at) 
-        VALUES('".$_GET["lightSensor"]."','".$_GET["flameSensor1"]."','".$_GET["flameSensor2"]."','".$_GET["flameSensor3"]."','".$_GET["flameSensor4"]."','".$_GET["humandetect"]."','".$_GET["celcius"]."','".$_GET["fahrenheit"]."',now(),now())";
+        $sql= "INSERT INTO sensors(LightSensor,FlameSensor1,FlameSensor2,FlameSensor3,FlameSensor4,Celcius,Fahrenheit,HumanDetect,created_at,updated_at) 
+        VALUES('".$_GET["lightSensor"]."','".$_GET["flameSensor1"]."','".$_GET["flameSensor2"]."','".$_GET["flameSensor3"]."','".$_GET["flameSensor4"]."','".$_GET["celcius"]."','".$_GET["fahrenheit"]."','".$_GET["humandetect"]."',now(),now())";
         $res= mysqli_query($dbcon,$sql) or die ("Failed to insert".mysqli_error());
         if(isset($res)){
             header("Location: response.php?yes=1");

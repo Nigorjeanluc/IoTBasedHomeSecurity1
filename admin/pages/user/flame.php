@@ -75,7 +75,75 @@
                 <!-- /.callout -->
 
                 <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-danger">
+                            <div class="box-header with-border">
+                            <h3 class="box-title">Latest Fire Outbreak Detection</h3>
 
+                            <div class="box-tools pull-right">
+                                <span class="label label-danger">8 New Members</span>
+                                <!--<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                                </button>-->
+                            </div>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body no-padding">
+                            <ul class="users-list clearfix">
+                            <?php
+                                include('../../../connect.php');
+                                $query = "SELECT * FROM sensors WHERE FlameSensor1 >= 999 AND FlameSensor2 >= 999 AND FlameSensor3 >=999 AND FlameSensor4 >= 999 ORDER BY id DESC LIMIT 20";
+                                $res = mysqli_query($dbcon, $query);
+                                while($row = mysqli_fetch_array($res)){
+                                    echo '
+                                    <li>
+                                    <img style="width:100px;height:100px" src="../img/flamea.png" alt="User Image">
+                                    <span class="users-list-date"><b>Flame detecetd at</b></span>
+                                    <a class="users-list-name" data-toggle="modal" data-target="#myModal'.$row['id'].'">'.date('h:i:sA - F dS, Y', strtotime($row['created_at'])).'</a>
+                                    </li>';
+                                }
+                            ?>
+                            </ul>
+                            <!-- /.users-list -->
+                            </div>
+                            <!-- /.box-body -->
+                            <!--<div class="box-footer text-center">
+                            <a href="javascript:void(0)" class="uppercase">View All Users</a>
+                            </div>-->
+                            <!-- /.box-footer -->
+                        </div>
+                        <!--/.box -->
+                        <!-- Modal -->
+                        <?php
+                                include('../../../connect.php');
+                                $queryy = "SELECT * FROM sensors WHERE FlameSensor1 >= 999 AND FlameSensor2 >= 999 AND FlameSensor3 >=999 AND FlameSensor4 >= 999 ORDER BY id DESC LIMIT 20";
+                                $ress = mysqli_query($dbcon, $queryy);
+                                while($roww = mysqli_fetch_array($ress)){
+                                    echo '
+                            <div class="modal modal-danger fade" id="myModal'.$roww['id'].'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel">Fire outbreak at '.date('h:i:sA - F dS, Y', strtotime($roww['created_at'])).'</h4>
+                                            </div>
+                                            <div style="text-align:center" class="modal-body">
+                                                <img style="width:100px;height:100px" src="../img/flamea.png" alt="User Image">
+                                                <h1 style="font-family:broadway">Flame detected at '.date('h:i:sA - F dS, Y', strtotime($roww['created_at'])).'</h1>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                            </div>
+                            <!-- /.modal -->';
+                                }
+                        ?>
+                    </div>
                     <!-- /.col -->
 
                     <div class="col-md-4">

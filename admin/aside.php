@@ -29,6 +29,18 @@ echo'
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
+              <a href="pages/user/human.php">
+                <i class="fa fa-group"></i> <span>Human detection</span>
+                <!--<span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>-->
+              </a>
+              <!--<ul class="treeview-menu">
+                <li><a href="/admin/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                <li><a href="/admin/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+              </ul>-->
+            </li>
+            <li class="treeview">
               <a href="pages/user/flame.php">
                 <i class="fa fa-area-chart"></i> <span>Flame detection</span>
                 <!--<span class="pull-right-container">
