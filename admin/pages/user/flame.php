@@ -93,7 +93,7 @@
                             <ul class="users-list clearfix">
                             <?php
                                 include('../../../connect.php');
-                                $query = "SELECT * FROM sensors WHERE FlameSensor1 >= 999 AND FlameSensor2 >= 999 AND FlameSensor3 >=999 AND FlameSensor4 >= 999 ORDER BY id DESC LIMIT 20";
+                                $query = "SELECT * FROM sensors WHERE FlameSensor1 >= 999 OR FlameSensor2 >= 999 OR FlameSensor3 >=999 OR FlameSensor4 >= 999 ORDER BY id DESC LIMIT 20";
                                 $res = mysqli_query($dbcon, $query);
                                 while($row = mysqli_fetch_array($res)){
                                     echo '
@@ -117,7 +117,7 @@
                         <!-- Modal -->
                         <?php
                                 include('../../../connect.php');
-                                $queryy = "SELECT * FROM sensors WHERE FlameSensor1 >= 999 AND FlameSensor2 >= 999 AND FlameSensor3 >=999 AND FlameSensor4 >= 999 ORDER BY id DESC LIMIT 20";
+                                $queryy = "SELECT * FROM sensors WHERE FlameSensor1 >= 999 OR FlameSensor2 >= 999 OR FlameSensor3 >=999 OR FlameSensor4 >= 999 ORDER BY id DESC LIMIT 20";
                                 $ress = mysqli_query($dbcon, $queryy);
                                 while($roww = mysqli_fetch_array($ress)){
                                     echo '
